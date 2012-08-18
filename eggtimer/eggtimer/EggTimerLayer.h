@@ -16,6 +16,7 @@
   CCSprite *bg;
   CCSprite *egg;
   NSMutableArray *labelf;
+  
 }
 
 // returns a CCScene that contains the EggTimerLayer as the only child

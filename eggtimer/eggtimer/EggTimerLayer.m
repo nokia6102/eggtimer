@@ -29,6 +29,9 @@
 }
 
 // on "init" you need to initialize your instance
+
+
+
 -(id) init
 {
 	// always call "super" init
@@ -94,6 +97,24 @@
 	return self;
 }
 
+
+-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+  
+ 
+}
+
+-(void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  
+}
+-(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+ 
+}
+
+
+
+
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
@@ -104,4 +125,6 @@
 	// don't forget to call "super dealloc"
 	[super dealloc];
 }
+
+
 @end
