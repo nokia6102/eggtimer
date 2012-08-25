@@ -16,10 +16,15 @@
   CCSprite *bg;
   CCSprite *egg;
   NSMutableArray *labelf;
-  
+  CGPoint startlocation;
+   UIAlertView *alert;
+  double diffx;  
 }
 
 // returns a CCScene that contains the EggTimerLayer as the only child
 +(CCScene *) scene;
-
+-(void)showMessage;
+-(void)leftrotate;
+-(void)rightrotate;
+-(void)showNumber;
 @end

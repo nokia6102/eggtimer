@@ -110,6 +110,7 @@
 	CGRect screenRect = [[UIScreen mainScreen] bounds];
 	CGRect rect = CGRectZero;
 
+ 
 	
 	if(toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)		
 		rect = screenRect;
@@ -118,6 +119,7 @@
 		rect.size = CGSizeMake( screenRect.size.height, screenRect.size.width );
 	
 	CCDirector *director = [CCDirector sharedDirector];
+  
 	EAGLView *glView = [director openGLView];
 	float contentScaleFactor = [director contentScaleFactor];
 	
@@ -147,7 +149,5 @@
 - (void)dealloc {
     [super dealloc];
 }
-
-
 @end
 
