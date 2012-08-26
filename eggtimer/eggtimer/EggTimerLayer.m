@@ -106,13 +106,29 @@
 {
   CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
   diffx=touchLocation.x-startlocation.x;
-  if (diffx) {
+  if (diffx>0) {
      [self leftrotate ];
      CCLOG(@"%f ",diffx);
-    
-    [self removeChild:label2 cleanup:YES];
+     [self removeChild:label cleanup:YES];
+     [self removeChild:label1 cleanup:YES];
+     [self removeChild:label2 cleanup:YES];
+     [self removeChild:label_1 cleanup:YES];
+     [self removeChild:label_2 cleanup:YES];
     [self showNumber];
   }
+  
+  if (diffx <0){
+    [self rightrotate ];
+    CCLOG(@"%f ",diffx);
+    [self removeChild:label cleanup:YES];
+    [self removeChild:label1 cleanup:YES];
+    [self removeChild:label2 cleanup:YES];
+    [self removeChild:label_1 cleanup:YES];
+    [self removeChild:label_2 cleanup:YES];
+    [self showNumber];
+    }
+    
+  
 //  NSLog(@"%f  ",touchLocation.x-startlocation.x);
 }
 
@@ -147,21 +163,23 @@
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)
 	
-	// don't forget to call "super dealloc"
+	// don't forget to call "super dealloc" 
 	[super dealloc];
 }
 
 -(void)leftrotate{
   NSString *tempString;
   tempString=[labelf objectAtIndex: 0];
-  for (int i=0;i<=8;i++)
-  [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i+1]];
-  
-  
-//  [labelf objectAtIndex: 1]=tempString;
+  for (int i=0;i<=8;i++) [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i+1]];  
+  [labelf replaceObjectAtIndex:9 withObject:tempString];
 }
 
 -(void)rightrotate{
+//  NSString *tempString;
+//  
+//  tempString=[labelf objectAtIndex: 9];
+//  for (int i=1;i<=9;i++) [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i-1]];  
+//  [labelf replaceObjectAtIndex:0 withObject:tempString]; 
   
 }
 
@@ -191,11 +209,11 @@
   egg.position=CGPointMake(screenSize.width/2, screenSize.height/2-50);
   
   
-  CCLabelTTF *label = [CCLabelTTF labelWithString:[labelf objectAtIndex: 0] fontName:@"Marker Felt" fontSize:32];
-  CCLabelTTF *label1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 1] fontName:@"Marker Felt" fontSize:32];
-  CCLabelTTF *label2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 2] fontName:@"Marker Felt" fontSize:32];
-  CCLabelTTF *label_1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 9] fontName:@"Marker Felt" fontSize:32];
-  CCLabelTTF *label_2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 8] fontName:@"Marker Felt" fontSize:32];
+  label = [CCLabelTTF labelWithString:[labelf objectAtIndex: 0] fontName:@"Marker Felt" fontSize:32];
+  label1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 1] fontName:@"Marker Felt" fontSize:32];
+  label2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 2] fontName:@"Marker Felt" fontSize:32];
+  label_1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 9] fontName:@"Marker Felt" fontSize:32];
+  label_2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 8] fontName:@"Marker Felt" fontSize:32];
   //     
   
   
@@ -210,9 +228,6 @@
 	
   // position the label on the center of the screen
   label.position =  ccp( size.width /2 , size.height/2 -65);
-	
-  
-  // add the label as a child to this Layer
   [self addChild: label z:2 tag:3];
   
   label1.position =  ccp( size.width /2+30 , size.height/2 -60);		
