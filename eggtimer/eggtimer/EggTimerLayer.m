@@ -106,7 +106,7 @@
 {
   CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
   diffx=touchLocation.x-startlocation.x;
-  if (diffx>0) {
+  if (diffx<0) {
      [self leftrotate ];
      CCLOG(@"%f ",diffx);
      [self removeChild:label cleanup:YES];
@@ -117,7 +117,7 @@
     [self showNumber];
   }
   
-  if (diffx <0){
+  if (diffx>0){
     [self rightrotate ];
     CCLOG(@"%f ",diffx);
     [self removeChild:label cleanup:YES];
@@ -175,11 +175,11 @@
 }
 
 -(void)rightrotate{
-//  NSString *tempString;
-//  
-//  tempString=[labelf objectAtIndex: 9];
-//  for (int i=1;i<=9;i++) [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i-1]];  
-//  [labelf replaceObjectAtIndex:0 withObject:tempString]; 
+  NSString *tempString;
+  
+  tempString=[labelf objectAtIndex: 9];
+  for (int i=9;i>=1;i--) [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i-1]];  
+  [labelf replaceObjectAtIndex:0 withObject:tempString]; 
   
 }
 
