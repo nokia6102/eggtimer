@@ -18,7 +18,7 @@
   NSMutableArray *labelf;
   CGPoint startlocation;
    UIAlertView *alert;
-  double diffx;  
+  double diffx,diffy;  
   CCLabelTTF *label;
   CCLabelTTF *label1;
   CCLabelTTF *label2;
@@ -33,4 +33,5 @@
 -(void)leftrotate;
 -(void)rightrotate;
 -(void)showNumber;
+-(void)cleanNumber;
 @end

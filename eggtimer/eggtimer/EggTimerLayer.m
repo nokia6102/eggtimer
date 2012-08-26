@@ -106,28 +106,36 @@
 {
   CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
   diffx=touchLocation.x-startlocation.x;
-  if (diffx<0) {
+  diffy=touchLocation.y-startlocation.y;
+
+  if (diffx<-10) {
      [self leftrotate ];
-     CCLOG(@"%f ",diffx);
-     [self removeChild:label cleanup:YES];
-     [self removeChild:label1 cleanup:YES];
-     [self removeChild:label2 cleanup:YES];
-     [self removeChild:label_1 cleanup:YES];
-     [self removeChild:label_2 cleanup:YES];
+     CCLOG(@"diffx:%f ",diffx);
+    [self cleanNumber];
     [self showNumber];
   }
   
-  if (diffx>0){
+  if (diffx>10){
     [self rightrotate ];
-    CCLOG(@"%f ",diffx);
-    [self removeChild:label cleanup:YES];
-    [self removeChild:label1 cleanup:YES];
-    [self removeChild:label2 cleanup:YES];
-    [self removeChild:label_1 cleanup:YES];
-    [self removeChild:label_2 cleanup:YES];
+    CCLOG(@"diffx:%f ",diffx);
+    [self cleanNumber];
     [self showNumber];
     }
     
+  if (diffy<-10) {
+//    [self leftrotate ];
+    CCLOG(@"diffy:%f ",diffy);
+    [self cleanNumber];
+    [self showNumber];
+  }
+  
+  if (diffy>10){
+//    [self rightrotate ];
+    CCLOG(@"diffy:%f ",diffy);
+    [self cleanNumber];
+    [self showNumber];
+  }
+
   
 //  NSLog(@"%f  ",touchLocation.x-startlocation.x);
 }
@@ -181,6 +189,15 @@
   for (int i=9;i>=1;i--) [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i-1]];  
   [labelf replaceObjectAtIndex:0 withObject:tempString]; 
   
+}
+
+-(void)cleanNumber
+{
+  [self removeChild:label cleanup:YES];
+  [self removeChild:label1 cleanup:YES];
+  [self removeChild:label2 cleanup:YES];
+  [self removeChild:label_1 cleanup:YES];
+  [self removeChild:label_2 cleanup:YES];
 }
 
 -(void)showNumber
