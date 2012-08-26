@@ -34,4 +34,7 @@
 -(void)rightrotate;
 -(void)showNumber;
 -(void)cleanNumber;
+-(void)settimer;
+-(void)stoptimer;
+-(void)et;
 @end

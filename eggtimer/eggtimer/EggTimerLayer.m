@@ -41,20 +41,8 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
-//    self.isTouchEnabled = YES;
-// 
-//    bg=[CCSprite spriteWithFile:@"bg.png"];
-//    [self addChild:bg z:0 tag:1];
-//    CGSize screenSize=[CCDirector sharedDirector].winSize;
-//    
-//    bg.position=CGPointMake(screenSize.width/2, screenSize.height/2);
-//
-//
-//    
-//    egg=[CCSprite spriteWithFile:@"egg.png"];
-//    [self addChild:egg z:1 tag:2];
-//
-//    egg.position=CGPointMake(screenSize.width/2, screenSize.height/2-50);
+
+
     
       labelf = [ [ NSMutableArray alloc ] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",nil];//宣告一陣列放入aa、bb字串    
 //    
@@ -123,43 +111,22 @@
     }
     
   if (diffy<-10) {
-//    [self leftrotate ];
+    [self settimer ];
     CCLOG(@"diffy:%f ",diffy);
     [self cleanNumber];
     [self showNumber];
   }
   
   if (diffy>10){
-//    [self rightrotate ];
+    [self stoptimer ];
     CCLOG(@"diffy:%f ",diffy);
     [self cleanNumber];
     [self showNumber];
   }
 
   
-//  NSLog(@"%f  ",touchLocation.x-startlocation.x);
 }
 
-//-(void)ccTouchesBegan:(NSSet *)touch withEvent:(UIEvent *)event {
-//  UITouch *myTouch = [touch anyObject];
-//  CGPoint startlocation = [myTouch locationInView:[myTouch view]];
-//  //startlocation = [[CCDirector sharedDirector] convertToGL:startlocation];
-//}
-//
-//-(void)ccTouchesMoved:(NSSet *)touch withEvent:(UIEvent *)event
-//{
-//
-//}
-//-(void)ccTouchesEnded:(NSSet *)touch withEvent:(UIEvent *)event
-//{
-//  UITouch *myTouch = [touch anyObject];
-//  CGPoint endlocation = [myTouch locationInView:[myTouch view]];
-//  // endlocation = [[CCDirector sharedDirector] convertToGL:endlocation];
-//  if ( endlocation.x - startlocation.x ) 
-//    NSLog(@"+");
-//  else
-//    NSLog(@"-"); 
-//}
 
 
 
@@ -202,15 +169,6 @@
 
 -(void)showNumber
 {
-  
-  
-//  CGSize s = [CCDirector sharedDirector].winSize;
-//  glLineWidth( 5.0f );
-//  glEnable(GL_LINE_SMOOTH);
-//  glColor4ub(255,0,0,255);
-//  ccDrawLine( ccp(0, s.height), ccp(s.width, 0) );
-  
-  
   
   bg=[CCSprite spriteWithFile:@"bg.png"];
   [self addChild:bg z:0 tag:1];
@@ -258,8 +216,29 @@
   
   label_2.position =  ccp( size.width /2-60 , size.height/2 -55);		
   [self addChild: label_2 z:4 tag:5];
- 
-  
+}
+
+-(void)settimer
+{
+ [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(step:) userInfo:nil repeats:YES]; 
+}
+
+-(void)stoptimer
+{
+//  [self unschedule:_cmd];
+//   [self unschedule:@selector(_cmd)];
+  [self unscheduleUpdate];
+//  [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(et:) userInfo:nil repeats:NO]; 
+}
+
+-(void)et
+{
+  CCLOG(@"empty ");  
+}
+
+-(void) step:(ccTime) dt
+{      
+  CCLOG(@"%d",(int)time);
 }
 
 @end
