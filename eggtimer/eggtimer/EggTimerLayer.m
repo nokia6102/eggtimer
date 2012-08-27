@@ -111,7 +111,7 @@
     }
     
   if (diffy<-10) {
-    [self settimer ];
+    [self settimer];
     CCLOG(@"diffy:%f ",diffy);
     [self cleanNumber];
     [self showNumber];
@@ -220,15 +220,16 @@
 
 -(void)settimer
 {
- [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(step:) userInfo:nil repeats:YES]; 
+// [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(step:) userInfo:nil repeats:YES]; 
+  [self schedule:@selector(step:) interval:1];
 }
 
 -(void)stoptimer
 {
-//  [self unschedule:_cmd];
-//   [self unschedule:@selector(_cmd)];
-  [self unscheduleUpdate];
-//  [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(et:) userInfo:nil repeats:NO]; 
+//  [self unscheduleAllSelectors];
+  [self unschedule:@selector(step:)];
+  CCLOG(@"stop unschedule");
+ 
 }
 
 -(void)et
@@ -238,7 +239,7 @@
 
 -(void) step:(ccTime) dt
 {      
-  CCLOG(@"%d",(int)time);
+  CCLOG(@"runing step");
 }
 
 @end
