@@ -124,6 +124,7 @@
 		DBAC74FE15CCF5EF00016453 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC74FD15CCF5EF00016453 /* RootViewController.m */; };
 		DBAC750115CCF5EF00016453 /* EggTimerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC750015CCF5EF00016453 /* EggTimerLayer.m */; };
 		DBAC750F15CCFA4900016453 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAC750E15CCFA4900016453 /* bg.png */; };
+		DBB68A4015F10F85007E3129 /* CCShake.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB68A3F15F10F85007E3129 /* CCShake.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -364,6 +365,8 @@
 		DBAC750015CCF5EF00016453 /* EggTimerLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EggTimerLayer.m; sourceTree = "<group>"; };
 		DBAC750215CCF5EF00016453 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		DBAC750E15CCFA4900016453 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		DBB68A3E15F10F85007E3129 /* CCShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCShake.h; sourceTree = "<group>"; };
+		DBB68A3F15F10F85007E3129 /* CCShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCShake.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +435,8 @@
 				DBAC73A815CCF5ED00016453 /* Resources */,
 				DBAC73BC15CCF5ED00016453 /* libs */,
 				DBAC74F515CCF5EF00016453 /* Supporting Files */,
+				DBB68A3E15F10F85007E3129 /* CCShake.h */,
+				DBB68A3F15F10F85007E3129 /* CCShake.m */,
 			);
 			path = eggtimer;
 			sourceTree = "<group>";
@@ -933,6 +938,7 @@
 				DBAC74FB15CCF5EF00016453 /* AppDelegate.m in Sources */,
 				DBAC74FE15CCF5EF00016453 /* RootViewController.m in Sources */,
 				DBAC750115CCF5EF00016453 /* EggTimerLayer.m in Sources */,
+				DBB68A4015F10F85007E3129 /* CCShake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

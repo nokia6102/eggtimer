@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "EggTimerLayer.h"
-
+#import "CCShake.h"
 // EggTimerLayer implementation
 @implementation EggTimerLayer
 
@@ -239,15 +239,20 @@
 {      
   
   count++;
-  if (count==12) 
+  if (count==60) 
   {
     [self rightrotate ];
     CCLOG(@"diffx:%f ",diffx);
     [self cleanNumber];
     [self showNumber];
     if([[labelf objectAtIndex: 0] intValue ]==0) 
-       [self stoptimer];
-    count=0;
+    {
+     [egg runAction:[CCShake actionWithDuration:.05f amplitude:ccp(16,16) dampening:false shakes:10]];
+     [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:5]];
+     [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:10]];
+      [self stoptimer];
+    }
+      count=0;
   }
   CCLOG(@"runing step ,count %d",count);
 }
