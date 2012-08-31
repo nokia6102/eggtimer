@@ -24,7 +24,7 @@
   CCLabelTTF *label2;
   CCLabelTTF *label_1;
   CCLabelTTF *label_2;
-  
+  NSInteger count;
 }
 
 // returns a CCScene that contains the EggTimerLayer as the only child

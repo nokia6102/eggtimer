@@ -41,9 +41,7 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
-
-
-    
+    count=0;
       labelf = [ [ NSMutableArray alloc ] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",nil];//宣告一陣列放入aa、bb字串    
 //    
 		// create and initialize a Label
@@ -239,7 +237,19 @@
 
 -(void) step:(ccTime) dt
 {      
-  CCLOG(@"runing step");
+  
+  count++;
+  if (count==12) 
+  {
+    [self rightrotate ];
+    CCLOG(@"diffx:%f ",diffx);
+    [self cleanNumber];
+    [self showNumber];
+    if([[labelf objectAtIndex: 0] intValue ]==0) 
+       [self stoptimer];
+    count=0;
+  }
+  CCLOG(@"runing step ,count %d",count);
 }
 
 @end
