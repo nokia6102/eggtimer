@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB47F9C215F3773B0009E9AA /* CLKTICK3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */; };
+		DB47F9CD15F37BB00009E9AA /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9CC15F37BB00009E9AA /* clock.wav */; };
+		DB47F9CF15F37E710009E9AA /* clock1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9CE15F37E710009E9AA /* clock1.mp3 */; };
+		DB47F9D115F380990009E9AA /* cuckoo4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9D015F380990009E9AA /* cuckoo4.wav */; };
+		DB47F9D315F382320009E9AA /* clock2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9D215F382320009E9AA /* clock2.mp3 */; };
 		DB52674615CCFDA300F6233E /* egg.png in Resources */ = {isa = PBXBuildFile; fileRef = DB52674515CCFDA300F6233E /* egg.png */; };
 		DBAC739815CCF5ED00016453 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC739715CCF5ED00016453 /* QuartzCore.framework */; };
 		DBAC739A15CCF5ED00016453 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC739915CCF5ED00016453 /* OpenGLES.framework */; };
@@ -128,6 +133,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CLKTICK3.wav; sourceTree = "<group>"; };
+		DB47F9CC15F37BB00009E9AA /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
+		DB47F9CE15F37E710009E9AA /* clock1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock1.mp3; sourceTree = "<group>"; };
+		DB47F9D015F380990009E9AA /* cuckoo4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cuckoo4.wav; sourceTree = "<group>"; };
+		DB47F9D215F382320009E9AA /* clock2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock2.mp3; sourceTree = "<group>"; };
 		DB52674515CCFDA300F6233E /* egg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg.png; sourceTree = "<group>"; };
 		DBAC739315CCF5ED00016453 /* eggtimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eggtimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAC739715CCF5ED00016453 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -423,6 +433,11 @@
 		DBAC73A715CCF5ED00016453 /* eggtimer */ = {
 			isa = PBXGroup;
 			children = (
+				DB47F9D215F382320009E9AA /* clock2.mp3 */,
+				DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */,
+				DB47F9D015F380990009E9AA /* cuckoo4.wav */,
+				DB47F9CE15F37E710009E9AA /* clock1.mp3 */,
+				DB47F9CC15F37BB00009E9AA /* clock.wav */,
 				DBAC74F915CCF5EF00016453 /* AppDelegate.h */,
 				DBAC74FA15CCF5EF00016453 /* AppDelegate.m */,
 				DBAC74FC15CCF5EF00016453 /* RootViewController.h */,
@@ -830,6 +845,11 @@
 				DBAC73BB15CCF5ED00016453 /* iTunesArtwork in Resources */,
 				DBAC750F15CCFA4900016453 /* bg.png in Resources */,
 				DB52674615CCFDA300F6233E /* egg.png in Resources */,
+				DB47F9C215F3773B0009E9AA /* CLKTICK3.wav in Resources */,
+				DB47F9CD15F37BB00009E9AA /* clock.wav in Resources */,
+				DB47F9CF15F37E710009E9AA /* clock1.mp3 in Resources */,
+				DB47F9D115F380990009E9AA /* cuckoo4.wav in Resources */,
+				DB47F9D315F382320009E9AA /* clock2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

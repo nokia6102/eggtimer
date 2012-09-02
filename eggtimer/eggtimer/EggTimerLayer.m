@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "EggTimerLayer.h"
 #import "CCShake.h"
+#import "SimpleAudioEngine.h"
 // EggTimerLayer implementation
 @implementation EggTimerLayer
 
@@ -42,10 +43,12 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
     count=0;
-      labelf = [ [ NSMutableArray alloc ] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",nil];//宣告一陣列放入aa、bb字串    
-//    
-		// create and initialize a Label
+      labelf = [ [ NSMutableArray alloc ] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",nil];//宣告一陣列放入aa、bb字串        
     
+//#if defined (DEBUG)
+    [[CCDirector sharedDirector] setDisplayFPS:NO];
+//#endif
+   
     [self showNumber];
 		
     
@@ -219,7 +222,10 @@
 -(void)settimer
 {
 // [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(step:) userInfo:nil repeats:YES]; 
+//  [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"clock1.mp3" loop:YES];
+//  [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:1]];
   [self schedule:@selector(step:) interval:1];
+  
 }
 
 -(void)stoptimer
@@ -227,6 +233,8 @@
 //  [self unscheduleAllSelectors];
   [self unschedule:@selector(step:)];
   CCLOG(@"stop unschedule");
+  count=0;
+// [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:1]];
  
 }
 
@@ -239,14 +247,18 @@
 {      
   
   count++;
+  if (count!=60) [[SimpleAudioEngine sharedEngine] playEffect:@"clock1.mp3"];
   if (count==60) 
   {
+    [[SimpleAudioEngine sharedEngine] playEffect:@"clock2.mp3"];
     [self rightrotate ];
     CCLOG(@"diffx:%f ",diffx);
     [self cleanNumber];
     [self showNumber];
     if([[labelf objectAtIndex: 0] intValue ]==0) 
     {
+      [[SimpleAudioEngine sharedEngine] playEffect:@"cuckoo4.wav"];
+    
      [egg runAction:[CCShake actionWithDuration:.05f amplitude:ccp(16,16) dampening:false shakes:10]];
      [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:5]];
      [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:10]];
