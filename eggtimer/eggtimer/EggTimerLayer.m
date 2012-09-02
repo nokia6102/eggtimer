@@ -144,6 +144,7 @@
 }
 
 -(void)leftrotate{
+     [[SimpleAudioEngine sharedEngine] playEffect:@"turn.mp3"];
   NSString *tempString;
   tempString=[labelf objectAtIndex: 0];
   for (int i=0;i<=8;i++) [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i+1]];  
@@ -151,12 +152,11 @@
 }
 
 -(void)rightrotate{
+     [[SimpleAudioEngine sharedEngine] playEffect:@"turn.mp3"];
   NSString *tempString;
-  
   tempString=[labelf objectAtIndex: 9];
   for (int i=9;i>=1;i--) [labelf replaceObjectAtIndex:i withObject:[labelf objectAtIndex: i-1]];  
   [labelf replaceObjectAtIndex:0 withObject:tempString]; 
-  
 }
 
 -(void)cleanNumber
