@@ -234,6 +234,7 @@
   [self unschedule:@selector(step:)];
   CCLOG(@"stop unschedule");
   count=0;
+    
 // [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:1]];
  
 }
@@ -258,7 +259,8 @@
     if([[labelf objectAtIndex: 0] intValue ]==0) 
     {
       [[SimpleAudioEngine sharedEngine] playEffect:@"cuckoo4.wav"];
-    
+      AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);  //Virate sound
+
      [egg runAction:[CCShake actionWithDuration:.05f amplitude:ccp(16,16) dampening:false shakes:10]];
      [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:5]];
      [egg runAction:[CCShake actionWithDuration:1.05f amplitude:ccp(16,16) dampening:false shakes:10]];
