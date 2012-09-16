@@ -111,14 +111,14 @@
     [self showNumber];
     }
     
-  if (diffy<-10) {
+  if (diffy<-30) {
     [self settimer];
     CCLOG(@"diffy:%f ",diffy);
     [self cleanNumber];
     [self showNumber];
   }
   
-  if (diffy>10){
+  if (diffy>30){
     [self stoptimer ];
     CCLOG(@"diffy:%f ",diffy);
     [self cleanNumber];
@@ -166,24 +166,28 @@
   [self removeChild:label2 cleanup:YES];
   [self removeChild:label_1 cleanup:YES];
   [self removeChild:label_2 cleanup:YES];
+  [self removeChild:leftrightd cleanup:YES];
+  [self removeChild:updownd cleanup:YES];
 }
 
 -(void)showNumber
 {
-  
+   CGSize screenSize=[CCDirector sharedDirector].winSize;
   bg=[CCSprite spriteWithFile:@"bg.png"];
   [self addChild:bg z:0 tag:1];
-  CGSize screenSize=[CCDirector sharedDirector].winSize;
-  
   bg.position=CGPointMake(screenSize.width/2, screenSize.height/2);
   
-  
-  
-  egg=[CCSprite spriteWithFile:@"egg.png"];
+  egg=[CCSprite spriteWithFile:@"egg2.png"];
   [self addChild:egg z:1 tag:2];
+  egg.position=CGPointMake(screenSize.width/2, screenSize.height/2-50);  
   
-  egg.position=CGPointMake(screenSize.width/2, screenSize.height/2-50);
-  
+  leftrightd=[CCSprite spriteWithFile:@"leftright-d.png"];
+  [self addChild:leftrightd z:11 tag:11];
+  leftrightd.position=CGPointMake(screenSize.width/2, screenSize.height/2+130);
+    
+  updownd=[CCSprite spriteWithFile:@"updownd.png"];
+  [self addChild:updownd z:12 tag:12];
+  updownd.position=CGPointMake(screenSize.width/2, screenSize.height/2+100);
   
   label = [CCLabelTTF labelWithString:[labelf objectAtIndex: 0] fontName:@"Marker Felt" fontSize:32];
   label1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 1] fontName:@"Marker Felt" fontSize:32];

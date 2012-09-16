@@ -15,6 +15,8 @@
 {
   CCSprite *bg;
   CCSprite *egg;
+  CCSprite *leftrightd,*updownd;
+  
   NSMutableArray *labelf;
   CGPoint startlocation;
    UIAlertView *alert;
