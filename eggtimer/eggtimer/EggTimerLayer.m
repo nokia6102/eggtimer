@@ -48,7 +48,8 @@
 //#if defined (DEBUG)
     [[CCDirector sharedDirector] setDisplayFPS:NO];
 //#endif
-   
+    
+ 
     [self showNumber];
 		
     
@@ -124,13 +125,8 @@
     [self cleanNumber];
     [self showNumber];
   }
-
   
 }
-
-
-
-
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
@@ -178,6 +174,7 @@
   bg.position=CGPointMake(screenSize.width/2, screenSize.height/2);
   
   egg=[CCSprite spriteWithFile:@"egg2.png"];
+  
   [self addChild:egg z:1 tag:2];
   egg.position=CGPointMake(screenSize.width/2, screenSize.height/2-50);  
   
@@ -252,6 +249,12 @@
 {      
   
   count++;
+  
+  if (count %2==0)
+    [egg setTexture:[[CCTextureCache sharedTextureCache] addImage:@"egg2.png"]];
+  else
+    [egg setTexture:[[CCTextureCache sharedTextureCache] addImage:@"egg2-red.png"]];
+  
   if (count!=60) [[SimpleAudioEngine sharedEngine] playEffect:@"clock1.mp3"];
   if (count==60) 
   {

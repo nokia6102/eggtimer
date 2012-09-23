@@ -27,6 +27,8 @@
 		DB6ADFB9160630A60032A4F9 /* updown-d.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6ADFB8160630A60032A4F9 /* updown-d.png */; };
 		DB6ADFBB160632740032A4F9 /* updownd.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6ADFBA160632730032A4F9 /* updownd.png */; };
 		DB6F517E15F39EB000D19428 /* turn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB6F517D15F39EB000D19428 /* turn.mp3 */; };
+		DBA22BEB160EBAA700A94FC7 /* egg2-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA22BEA160EBAA700A94FC7 /* egg2-red.png */; };
+		DBA22BED160EBCFE00A94FC7 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA22BEC160EBCFE00A94FC7 /* bg.png */; };
 		DBAC739815CCF5ED00016453 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC739715CCF5ED00016453 /* QuartzCore.framework */; };
 		DBAC739A15CCF5ED00016453 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC739915CCF5ED00016453 /* OpenGLES.framework */; };
 		DBAC739C15CCF5ED00016453 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBAC739B15CCF5ED00016453 /* OpenAL.framework */; };
@@ -134,7 +136,7 @@
 		DBAC74FB15CCF5EF00016453 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC74FA15CCF5EF00016453 /* AppDelegate.m */; };
 		DBAC74FE15CCF5EF00016453 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC74FD15CCF5EF00016453 /* RootViewController.m */; };
 		DBAC750115CCF5EF00016453 /* EggTimerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAC750015CCF5EF00016453 /* EggTimerLayer.m */; };
-		DBAC750F15CCFA4900016453 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAC750E15CCFA4900016453 /* bg.png */; };
+		DBAC750F15CCFA4900016453 /* bg-o.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAC750E15CCFA4900016453 /* bg-o.png */; };
 		DBB68A4015F10F85007E3129 /* CCShake.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB68A3F15F10F85007E3129 /* CCShake.m */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +161,8 @@
 		DB6ADFB8160630A60032A4F9 /* updown-d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "updown-d.png"; sourceTree = "<group>"; };
 		DB6ADFBA160632730032A4F9 /* updownd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updownd.png; sourceTree = "<group>"; };
 		DB6F517D15F39EB000D19428 /* turn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = turn.mp3; sourceTree = "<group>"; };
+		DBA22BEA160EBAA700A94FC7 /* egg2-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg2-red.png"; sourceTree = "<group>"; };
+		DBA22BEC160EBCFE00A94FC7 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		DBAC739315CCF5ED00016453 /* eggtimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eggtimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAC739715CCF5ED00016453 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DBAC739915CCF5ED00016453 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -386,7 +390,7 @@
 		DBAC74FF15CCF5EF00016453 /* EggTimerLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EggTimerLayer.h; sourceTree = "<group>"; };
 		DBAC750015CCF5EF00016453 /* EggTimerLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EggTimerLayer.m; sourceTree = "<group>"; };
 		DBAC750215CCF5EF00016453 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		DBAC750E15CCFA4900016453 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		DBAC750E15CCFA4900016453 /* bg-o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-o.png"; sourceTree = "<group>"; };
 		DBB68A3E15F10F85007E3129 /* CCShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCShake.h; sourceTree = "<group>"; };
 		DBB68A3F15F10F85007E3129 /* CCShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCShake.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -463,7 +467,9 @@
 				DB6ADFB8160630A60032A4F9 /* updown-d.png */,
 				DB6ADFBA160632730032A4F9 /* updownd.png */,
 				DB6ADFB2160628770032A4F9 /* egg2.png */,
-				DBAC750E15CCFA4900016453 /* bg.png */,
+				DBA22BEA160EBAA700A94FC7 /* egg2-red.png */,
+				DBA22BEC160EBCFE00A94FC7 /* bg.png */,
+				DBAC750E15CCFA4900016453 /* bg-o.png */,
 				DBAC73A815CCF5ED00016453 /* Resources */,
 				DBAC73BC15CCF5ED00016453 /* libs */,
 				DBAC74F515CCF5EF00016453 /* Supporting Files */,
@@ -853,7 +859,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBAC73AC15CCF5ED00016453 /* fps_images.png in Resources */,
-				DBAC750F15CCFA4900016453 /* bg.png in Resources */,
+				DBAC750F15CCFA4900016453 /* bg-o.png in Resources */,
 				DB52674615CCFDA300F6233E /* egg.png in Resources */,
 				DB47F9C215F3773B0009E9AA /* CLKTICK3.wav in Resources */,
 				DB47F9CD15F37BB00009E9AA /* clock.wav in Resources */,
@@ -874,6 +880,8 @@
 				DB6ADFB6160629F90032A4F9 /* leftright-d.png in Resources */,
 				DB6ADFB9160630A60032A4F9 /* updown-d.png in Resources */,
 				DB6ADFBB160632740032A4F9 /* updownd.png in Resources */,
+				DBA22BEB160EBAA700A94FC7 /* egg2-red.png in Resources */,
+				DBA22BED160EBCFE00A94FC7 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
