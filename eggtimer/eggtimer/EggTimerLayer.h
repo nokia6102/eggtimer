@@ -26,11 +26,17 @@
   CCLabelTTF *label2;
   CCLabelTTF *label_1;
   CCLabelTTF *label_2;
+  CCLabelTTF *label_siler;
   NSInteger count;
+  
+  CCMenu *mainMenu;
+  CCSprite *howplayimage;
+  CCMenuItem *howplayitem; 
 }
 
 // returns a CCScene that contains the EggTimerLayer as the only child
 +(CCScene *) scene;
+//-(void)showMessage:(id)sender;
 -(void)showMessage;
 -(void)leftrotate;
 -(void)rightrotate;

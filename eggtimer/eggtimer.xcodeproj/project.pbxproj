@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0CE35B167DF08200BD7CD3 /* howplay.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0CE35A167DF08200BD7CD3 /* howplay.png */; };
 		DB47F9C215F3773B0009E9AA /* CLKTICK3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */; };
 		DB47F9CD15F37BB00009E9AA /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9CC15F37BB00009E9AA /* clock.wav */; };
 		DB47F9CF15F37E710009E9AA /* clock1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9CE15F37E710009E9AA /* clock1.mp3 */; };
 		DB47F9D115F380990009E9AA /* cuckoo4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9D015F380990009E9AA /* cuckoo4.wav */; };
 		DB47F9D315F382320009E9AA /* clock2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9D215F382320009E9AA /* clock2.mp3 */; };
-		DB52674615CCFDA300F6233E /* egg.png in Resources */ = {isa = PBXBuildFile; fileRef = DB52674515CCFDA300F6233E /* egg.png */; };
 		DB55414215FC4A86003DCC6C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55414015FC4A86003DCC6C /* Default.png */; };
 		DB55414315FC4A86003DCC6C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55414115FC4A86003DCC6C /* Default@2x.png */; };
 		DB6AB97515FC49CF001884A6 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6AB96E15FC49CF001884A6 /* Icon-72.png */; };
@@ -24,7 +24,6 @@
 		DB6AB97B15FC49CF001884A6 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6AB97415FC49CF001884A6 /* iTunesArtwork.png */; };
 		DB6ADFB3160628770032A4F9 /* egg2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6ADFB2160628770032A4F9 /* egg2.png */; };
 		DB6ADFB6160629F90032A4F9 /* leftright-d.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6ADFB4160629F90032A4F9 /* leftright-d.png */; };
-		DB6ADFB9160630A60032A4F9 /* updown-d.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6ADFB8160630A60032A4F9 /* updown-d.png */; };
 		DB6ADFBB160632740032A4F9 /* updownd.png in Resources */ = {isa = PBXBuildFile; fileRef = DB6ADFBA160632730032A4F9 /* updownd.png */; };
 		DB6F517E15F39EB000D19428 /* turn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB6F517D15F39EB000D19428 /* turn.mp3 */; };
 		DBA22BEB160EBAA700A94FC7 /* egg2-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA22BEA160EBAA700A94FC7 /* egg2-red.png */; };
@@ -141,12 +140,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB0CE35A167DF08200BD7CD3 /* howplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howplay.png; sourceTree = "<group>"; };
 		DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CLKTICK3.wav; sourceTree = "<group>"; };
 		DB47F9CC15F37BB00009E9AA /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
 		DB47F9CE15F37E710009E9AA /* clock1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock1.mp3; sourceTree = "<group>"; };
 		DB47F9D015F380990009E9AA /* cuckoo4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cuckoo4.wav; sourceTree = "<group>"; };
 		DB47F9D215F382320009E9AA /* clock2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock2.mp3; sourceTree = "<group>"; };
-		DB52674515CCFDA300F6233E /* egg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg.png; sourceTree = "<group>"; };
 		DB55414015FC4A86003DCC6C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DB55414115FC4A86003DCC6C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DB6AB96E15FC49CF001884A6 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -158,7 +157,6 @@
 		DB6AB97415FC49CF001884A6 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		DB6ADFB2160628770032A4F9 /* egg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg2.png; sourceTree = "<group>"; };
 		DB6ADFB4160629F90032A4F9 /* leftright-d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftright-d.png"; sourceTree = "<group>"; };
-		DB6ADFB8160630A60032A4F9 /* updown-d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "updown-d.png"; sourceTree = "<group>"; };
 		DB6ADFBA160632730032A4F9 /* updownd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updownd.png; sourceTree = "<group>"; };
 		DB6F517D15F39EB000D19428 /* turn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = turn.mp3; sourceTree = "<group>"; };
 		DBA22BEA160EBAA700A94FC7 /* egg2-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg2-red.png"; sourceTree = "<group>"; };
@@ -449,6 +447,7 @@
 		DBAC73A715CCF5ED00016453 /* eggtimer */ = {
 			isa = PBXGroup;
 			children = (
+				DB0CE35A167DF08200BD7CD3 /* howplay.png */,
 				DB6F517D15F39EB000D19428 /* turn.mp3 */,
 				DB47F9D215F382320009E9AA /* clock2.mp3 */,
 				DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */,
@@ -462,9 +461,7 @@
 				DBAC74FF15CCF5EF00016453 /* EggTimerLayer.h */,
 				DBAC750015CCF5EF00016453 /* EggTimerLayer.m */,
 				DBAC750215CCF5EF00016453 /* GameConfig.h */,
-				DB52674515CCFDA300F6233E /* egg.png */,
 				DB6ADFB4160629F90032A4F9 /* leftright-d.png */,
-				DB6ADFB8160630A60032A4F9 /* updown-d.png */,
 				DB6ADFBA160632730032A4F9 /* updownd.png */,
 				DB6ADFB2160628770032A4F9 /* egg2.png */,
 				DBA22BEA160EBAA700A94FC7 /* egg2-red.png */,
@@ -860,7 +857,6 @@
 			files = (
 				DBAC73AC15CCF5ED00016453 /* fps_images.png in Resources */,
 				DBAC750F15CCFA4900016453 /* bg-o.png in Resources */,
-				DB52674615CCFDA300F6233E /* egg.png in Resources */,
 				DB47F9C215F3773B0009E9AA /* CLKTICK3.wav in Resources */,
 				DB47F9CD15F37BB00009E9AA /* clock.wav in Resources */,
 				DB47F9CF15F37E710009E9AA /* clock1.mp3 in Resources */,
@@ -878,10 +874,10 @@
 				DB55414315FC4A86003DCC6C /* Default@2x.png in Resources */,
 				DB6ADFB3160628770032A4F9 /* egg2.png in Resources */,
 				DB6ADFB6160629F90032A4F9 /* leftright-d.png in Resources */,
-				DB6ADFB9160630A60032A4F9 /* updown-d.png in Resources */,
 				DB6ADFBB160632740032A4F9 /* updownd.png in Resources */,
 				DBA22BEB160EBAA700A94FC7 /* egg2-red.png in Resources */,
 				DBA22BED160EBCFE00A94FC7 /* bg.png in Resources */,
+				DB0CE35B167DF08200BD7CD3 /* howplay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

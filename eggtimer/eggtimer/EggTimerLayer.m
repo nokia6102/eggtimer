@@ -21,7 +21,6 @@
 	
 	// 'layer' is an autorelease object.
 	EggTimerLayer *layer = [EggTimerLayer node];
-	
 	// add layer as a child to scene
 	[scene addChild: layer];
 	
@@ -49,10 +48,8 @@
     [[CCDirector sharedDirector] setDisplayFPS:NO];
 //#endif
     
- 
     [self showNumber];
-		
-    
+        
 //    [self showMessage];
 	}
 	return self;
@@ -71,7 +68,8 @@
   [super onExit];  
 }  
 
--(void)showMessage{   
+-(void)showMessage:(id)sender;
+{   
   alert = [[UIAlertView alloc] initWithTitle:@" " message:@"    Connecting to App Store,                  please wait" delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
   UIActivityIndicatorView *progress= [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(125, 100, 30, 30)];
   progress.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
@@ -136,6 +134,7 @@
 	// cocos2d will automatically release all the children (Label)
 	
 	// don't forget to call "super dealloc" 
+
 	[super dealloc];
 }
 
@@ -162,8 +161,12 @@
   [self removeChild:label2 cleanup:YES];
   [self removeChild:label_1 cleanup:YES];
   [self removeChild:label_2 cleanup:YES];
+  [self removeChild:label_siler cleanup:YES];
+  
   [self removeChild:leftrightd cleanup:YES];
   [self removeChild:updownd cleanup:YES];
+ 
+  [self removeChild:mainMenu cleanup:YES];
 }
 
 -(void)showNumber
@@ -180,25 +183,27 @@
   
   leftrightd=[CCSprite spriteWithFile:@"leftright-d.png"];
   [self addChild:leftrightd z:11 tag:11];
-  leftrightd.position=CGPointMake(screenSize.width/2, screenSize.height/2+130);
+  leftrightd.position=CGPointMake(screenSize.width/2, screenSize.height/2+132);
     
   updownd=[CCSprite spriteWithFile:@"updownd.png"];
   [self addChild:updownd z:12 tag:12];
   updownd.position=CGPointMake(screenSize.width/2, screenSize.height/2+100);
   
+  
   label = [CCLabelTTF labelWithString:[labelf objectAtIndex: 0] fontName:@"Marker Felt" fontSize:32];
   label1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 1] fontName:@"Marker Felt" fontSize:32];
   label2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 2] fontName:@"Marker Felt" fontSize:32];
   label_1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 9] fontName:@"Marker Felt" fontSize:32];
-  label_2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 8] fontName:@"Marker Felt" fontSize:32];
-  //     
-  
+  label_2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 8] fontName:@"Marker Felt" fontSize:32]; 
+  label_siler = [CCLabelTTF labelWithString:@"slide" fontName:@"Marker Felt" fontSize:32];
+
   
   label.color = ccc3(60,60,60);
   label1.color = ccc3(60,60,60);
   label2.color = ccc3(60,60,60);
   label_1.color = ccc3(60,60,60);
   label_2.color = ccc3(60,60,60);
+  label_siler.color = ccc3(255,255,255);
   
   // ask director the the window size
   CGSize size = [[CCDirector sharedDirector] winSize];
@@ -218,7 +223,23 @@
   
   label_2.position =  ccp( size.width /2-60 , size.height/2 -55);		
   [self addChild: label_2 z:4 tag:5];
-}
+
+  label_siler.position =  ccp( size.width /2 , size.height/2 +132);		
+  [self addChild: label_siler z:5 tag:6];
+  
+
+ 
+  
+  howplayimage = [CCSprite spriteWithFile:@"howplay.png"];
+  howplayitem = [CCMenuItemImage itemFromNormalSprite:howplayimage selectedSprite:nil target:self selector:@selector(showMessage:)];      //showMessage 一定要有 (id) sender 收
+  howplayitem.tag = 23;
+  howplayitem.position=ccp(size.width/2+80, size.height/2-182);    
+  mainMenu =[CCMenu menuWithItems:howplayitem,nil];
+  mainMenu.position=CGPointZero;
+  [self addChild:mainMenu z:23 tag:23];
+
+
+  }
 
 -(void)settimer
 {
@@ -277,5 +298,15 @@
   }
   CCLOG(@"runing step ,count %d",count);
 }
+
+
+
+#ifdef _FOR_DEBUG_
+-(BOOL) respondsToSelector : (SEL)aSelector {
+  printf("SELECTOR: %s\n", [NSStringFromSelector(aSelector) UTF8String]);
+  return [super respondsToSelector:aSelector];
+}
+#endif
+
 
 @end
