@@ -9,6 +9,7 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
+#import "GuideLayer.h"
 
 // EggTimerLayer
 @interface EggTimerLayer : CCLayer
@@ -36,6 +37,7 @@
 
 // returns a CCScene that contains the EggTimerLayer as the only child
 +(CCScene *) scene;
+
 //-(void)showMessage:(id)sender;
 -(void)showMessage;
 -(void)leftrotate;

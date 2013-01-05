@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DB0CE35B167DF08200BD7CD3 /* howplay.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0CE35A167DF08200BD7CD3 /* howplay.png */; };
+		DB386DC216982AF500645C00 /* GuideLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB386DC116982AF500645C00 /* GuideLayer.m */; };
+		DB386DC4169838AB00645C00 /* guide.png in Resources */ = {isa = PBXBuildFile; fileRef = DB386DC3169838AA00645C00 /* guide.png */; };
+		DB386DC616983B2A00645C00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DB386DC516983B2900645C00 /* back.png */; };
 		DB47F9C215F3773B0009E9AA /* CLKTICK3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */; };
 		DB47F9CD15F37BB00009E9AA /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9CC15F37BB00009E9AA /* clock.wav */; };
 		DB47F9CF15F37E710009E9AA /* clock1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB47F9CE15F37E710009E9AA /* clock1.mp3 */; };
@@ -141,6 +144,10 @@
 
 /* Begin PBXFileReference section */
 		DB0CE35A167DF08200BD7CD3 /* howplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howplay.png; sourceTree = "<group>"; };
+		DB386DC016982AF500645C00 /* GuideLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideLayer.h; sourceTree = "<group>"; };
+		DB386DC116982AF500645C00 /* GuideLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideLayer.m; sourceTree = "<group>"; };
+		DB386DC3169838AA00645C00 /* guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide.png; sourceTree = "<group>"; };
+		DB386DC516983B2900645C00 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		DB47F9C115F3773A0009E9AA /* CLKTICK3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CLKTICK3.wav; sourceTree = "<group>"; };
 		DB47F9CC15F37BB00009E9AA /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
 		DB47F9CE15F37E710009E9AA /* clock1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock1.mp3; sourceTree = "<group>"; };
@@ -447,6 +454,10 @@
 		DBAC73A715CCF5ED00016453 /* eggtimer */ = {
 			isa = PBXGroup;
 			children = (
+				DB386DC516983B2900645C00 /* back.png */,
+				DB386DC3169838AA00645C00 /* guide.png */,
+				DB386DC016982AF500645C00 /* GuideLayer.h */,
+				DB386DC116982AF500645C00 /* GuideLayer.m */,
 				DB0CE35A167DF08200BD7CD3 /* howplay.png */,
 				DB6F517D15F39EB000D19428 /* turn.mp3 */,
 				DB47F9D215F382320009E9AA /* clock2.mp3 */,
@@ -878,6 +889,8 @@
 				DBA22BEB160EBAA700A94FC7 /* egg2-red.png in Resources */,
 				DBA22BED160EBCFE00A94FC7 /* bg.png in Resources */,
 				DB0CE35B167DF08200BD7CD3 /* howplay.png in Resources */,
+				DB386DC4169838AB00645C00 /* guide.png in Resources */,
+				DB386DC616983B2A00645C00 /* back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,6 +1000,7 @@
 				DBAC74FE15CCF5EF00016453 /* RootViewController.m in Sources */,
 				DBAC750115CCF5EF00016453 /* EggTimerLayer.m in Sources */,
 				DBB68A4015F10F85007E3129 /* CCShake.m in Sources */,
+				DB386DC216982AF500645C00 /* GuideLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

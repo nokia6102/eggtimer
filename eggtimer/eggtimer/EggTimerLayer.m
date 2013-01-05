@@ -11,8 +11,13 @@
 #import "EggTimerLayer.h"
 #import "CCShake.h"
 #import "SimpleAudioEngine.h"
+#import "GuideLayer.h"
+
 // EggTimerLayer implementation
+
+
 @implementation EggTimerLayer
+
 
 +(CCScene *) scene
 {
@@ -70,13 +75,11 @@
 
 -(void)showMessage:(id)sender;
 {   
-  alert = [[UIAlertView alloc] initWithTitle:@" " message:@"    Connecting to App Store,                  please wait" delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-  UIActivityIndicatorView *progress= [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(125, 100, 30, 30)];
-  progress.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-  [alert addSubview:progress];
-  [progress startAnimating];
-  [alert show];
-  [alert release];
+//  [self stoptimer];
+  [[CCDirector sharedDirector] replaceScene:[GuideLayer scene]];
+//  [[CCDirector sharedDirector] pushScene:[GuideLayer scene]];
+//  [[CCDirector sharedDirector] popScene:[GuideLayer scene]];
+
 }
 
 
@@ -97,7 +100,7 @@
   diffy=touchLocation.y-startlocation.y;
 
   if (diffx<-10) {
-     [self leftrotate ];
+    [self leftrotate ];
      CCLOG(@"diffx:%f ",diffx);
     [self cleanNumber];
     [self showNumber];
@@ -162,10 +165,8 @@
   [self removeChild:label_1 cleanup:YES];
   [self removeChild:label_2 cleanup:YES];
   [self removeChild:label_siler cleanup:YES];
-  
   [self removeChild:leftrightd cleanup:YES];
   [self removeChild:updownd cleanup:YES];
- 
   [self removeChild:mainMenu cleanup:YES];
 }
 
