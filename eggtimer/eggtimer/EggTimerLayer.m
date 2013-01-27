@@ -76,8 +76,8 @@
 -(void)showMessage:(id)sender;
 {   
 //  [self stoptimer];
-  [[CCDirector sharedDirector] replaceScene:[GuideLayer scene]];
-//  [[CCDirector sharedDirector] pushScene:[GuideLayer scene]];
+//  [[CCDirector sharedDirector] replaceScene:[GuideLayer scene]];
+  [[CCDirector sharedDirector] pushScene:[GuideLayer scene]];
 //  [[CCDirector sharedDirector] popScene:[GuideLayer scene]];
 
 }

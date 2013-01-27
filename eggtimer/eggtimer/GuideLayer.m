@@ -49,6 +49,7 @@
 
 -(void)returnMain:(id)sender
 {
-  [[CCDirector sharedDirector] replaceScene:[EggTimerLayer scene]];
+  
+  [[CCDirector sharedDirector] popScene];
 }
 @end
