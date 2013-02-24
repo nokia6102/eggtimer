@@ -48,6 +48,19 @@
 	if( (self=[super init])) {
     count=0;
       labelf = [ [ NSMutableArray alloc ] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",nil];//宣告一陣列放入aa、bb字串        
+
+    CGSize size=[CCDirector sharedDirector].winSize;
+label_minteus=[CCLabelTTF labelWithString: [NSString stringWithFormat:@"%d:", count] fontName:@"Marker Felt" fontSize:20];
+label_minteus.color = ccc3(60,60,60);
+    label_minteus.position =  ccp( size.width /2-10 , size.height/2-20);		
+    [self addChild: label_minteus z:6 tag:7];
+
+    
+    label_secoend=[CCLabelTTF labelWithString: [NSString stringWithFormat:@"%2d", count] fontName:@"Marker Felt" fontSize:20];
+    label_secoend.color = ccc3(60,60,60);
+    label_secoend.position =  ccp( size.width /2+10 , size.height/2-20);		
+    [self addChild: label_secoend z:7 tag:8];
+
     
 //#if defined (DEBUG)
     [[CCDirector sharedDirector] setDisplayFPS:NO];
@@ -165,6 +178,7 @@
   [self removeChild:label_1 cleanup:YES];
   [self removeChild:label_2 cleanup:YES];
   [self removeChild:label_siler cleanup:YES];
+
   [self removeChild:leftrightd cleanup:YES];
   [self removeChild:updownd cleanup:YES];
   [self removeChild:mainMenu cleanup:YES];
@@ -197,7 +211,7 @@
   label_1 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 9] fontName:@"Marker Felt" fontSize:32];
   label_2 = [CCLabelTTF labelWithString:[labelf objectAtIndex: 8] fontName:@"Marker Felt" fontSize:32]; 
   label_siler = [CCLabelTTF labelWithString:@"slide" fontName:@"Marker Felt" fontSize:32];
-
+  
   
   label.color = ccc3(60,60,60);
   label1.color = ccc3(60,60,60);
@@ -205,6 +219,8 @@
   label_1.color = ccc3(60,60,60);
   label_2.color = ccc3(60,60,60);
   label_siler.color = ccc3(255,255,255);
+  
+  
   
   // ask director the the window size
   CGSize size = [[CCDirector sharedDirector] winSize];
@@ -227,7 +243,7 @@
 
   label_siler.position =  ccp( size.width /2 , size.height/2 +132);		
   [self addChild: label_siler z:5 tag:6];
-  
+
 
  
   
@@ -271,6 +287,16 @@
 {      
   
   count++;
+  
+//  [self removeChild:label_minteus cleanup:YES];
+//  CGSize size=[CCDirector sharedDirector].winSize;
+//  label_minteus.color = ccc3(60,60,60);
+//  label_minteus.position =  ccp( size.width /2 , size.height/2 +10);		
+//  [self addChild: label_minteus z:6 tag:7];
+  NSInteger mm;
+  mm=[[labelf objectAtIndex: 0] integerValue ];
+  [label_minteus setString:[NSString stringWithFormat:@"%d:", mm-1]];
+  [label_secoend setString:[NSString stringWithFormat:@"%2d", 60-count]];
   
   if (count %2==0)
     [egg setTexture:[[CCTextureCache sharedTextureCache] addImage:@"egg2.png"]];

@@ -27,6 +27,8 @@
   CCLabelTTF *label2;
   CCLabelTTF *label_1;
   CCLabelTTF *label_2;
+  CCLabelTTF *label_minteus;
+  CCLabelTTF *label_secoend;
   CCLabelTTF *label_siler;
   NSInteger count;
   
